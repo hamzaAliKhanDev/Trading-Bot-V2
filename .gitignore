@@ -1,0 +1,8 @@
+# Ignore Eclipse and VS Code config
+.factorypath
+.project
+.settings/
+
+# Ignore all log folders
+*Logs/
+*.log
