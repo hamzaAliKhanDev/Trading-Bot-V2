@@ -2,7 +2,6 @@ package com.deltaexchange.trade.service;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -72,7 +71,7 @@ public class StartBot {
 								final String[] entryPriceStr = { result.optString("entry_price", "") };
 
 								// Placing order for Dead zone
-								if (entryPriceStr[0] == null || entryPriceStr[0].isEmpty()) {
+								if ((entryPriceStr[0] == null || entryPriceStr[0].isEmpty()) && !config.getDeadZoneOrderPlaced()) {
 									consoleLogger
 											.info("[BOT] No EntryPrice found. Placing orders for dead zone::::::::");
 									entryPriceStr[0] = "";
@@ -131,8 +130,10 @@ public class StartBot {
 																	} else {
 																		if("buy".equalsIgnoreCase(sideArr.get(0))) {
 																			placeOrder.executeOrder(String.valueOf(limitPriceArr.get(0) + 1000), 2, "sell");
+																			config.setDeadZoneOrderPlaced(true);
 																		}else if("sell".equalsIgnoreCase(sideArr.get(0))){
 																			placeOrder.executeOrder(String.valueOf(limitPriceArr.get(0) - 1000), 2, "buy");
+																			config.setDeadZoneOrderPlaced(true);
 																		}
 																	}
 																});
@@ -142,6 +143,9 @@ public class StartBot {
 															}
 															}
 													});
+													}else{
+														consoleLogger.info(
+															"[BOT] No Active Orders Found in Dead Zone. Going for next tick:::::::::::");
 													}
 													
 													

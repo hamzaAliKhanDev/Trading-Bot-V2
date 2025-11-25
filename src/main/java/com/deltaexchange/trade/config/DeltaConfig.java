@@ -30,5 +30,16 @@ public class DeltaConfig {
 
      @Value("${delta.api.productid}")
     private String productId;
+
+    private boolean isDeadZoneOrderPlaced = false;
+
+    public boolean getDeadZoneOrderPlaced(){
+        return isDeadZoneOrderPlaced;
+    }
+
+    public void setDeadZoneOrderPlaced(boolean isDeadZoneOrderPlaced) {
+        this.isDeadZoneOrderPlaced = isDeadZoneOrderPlaced;
+    }
+    
 }
 

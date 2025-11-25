@@ -1,0 +1,255 @@
+[26 Nov 2025 00:12:39,861 ERROR Operators -Loggers.java]- Operator called default onErrorDropped
+reactor.core.Exceptions$ErrorCallbackNotImplemented: org.springframework.web.reactive.function.client.WebClientResponseException$Unauthorized: 401 Unauthorized from GET https://api.india.delta.exchange/v2/positions
+Caused by: org.springframework.web.reactive.function.client.WebClientResponseException$Unauthorized: 401 Unauthorized from GET https://api.india.delta.exchange/v2/positions
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:322) ~[spring-webflux-6.2.9.jar:6.2.9]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? 401 UNAUTHORIZED from GET https://api.india.delta.exchange/v2/positions [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:322) ~[spring-webflux-6.2.9.jar:6.2.9]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.2.9.jar:6.2.9]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2096) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.7.8.jar:3.7.8]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:413) [reactor-netty-core-1.2.8.jar:1.2.8]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:455) [reactor-netty-core-1.2.8.jar:1.2.8]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:509) [reactor-netty-core-1.2.8.jar:1.2.8]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:821) [reactor-netty-http-1.2.8.jar:1.2.8]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.2.8.jar:1.2.8]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519) [netty-handler-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377) [netty-handler-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428) [netty-handler-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) [netty-common-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.123.Final.jar:4.1.123.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.123.Final.jar:4.1.123.Final]
+		at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+[26 Nov 2025 00:25:14,986 INFO  Transaction -StartBot.java]- ::::::::::::::::::::::::::::::::::New Order execution Started:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:25:14,990 INFO  Transaction -StartBot.java]- Details of Current Order:- 
+ EntryPrice->87485, 
+ Size->18:::::
+[26 Nov 2025 00:25:15,296 INFO  Transaction -CheckAndOrderService.java]- Cancelled All Previous Orders for EntryPrice->87485.00000000, Size->18:::::
+[26 Nov 2025 00:25:15,913 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->87485.00000000, Size->18, Leverage->25:::::
+[26 Nov 2025 00:25:16,317 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->87485.00000000, Size->18, Leverage->10:::::
+[26 Nov 2025 00:25:17,545 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->87685, 
+ Size->18:::::
+[26 Nov 2025 00:25:17,547 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:25:17,554 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86735, 
+ Size->36:::::
+[26 Nov 2025 00:25:17,554 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:25:17,559 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->87985, 
+ Size->2:::::
+[26 Nov 2025 00:25:17,559 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:11,691 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:11,691 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:15,812 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:15,812 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:20,789 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:20,789 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:25,661 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:25,663 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:31,146 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:31,146 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:35,775 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:35,777 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:41,300 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:41,300 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:26:45,714 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86985, 
+ Size->2:::::
+[26 Nov 2025 00:26:45,715 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:38:44,550 INFO  Transaction -StartBot.java]- ::::::::::::::::::::::::::::::::::New Order execution Started:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:38:44,555 INFO  Transaction -StartBot.java]- Details of Current Order:- 
+ EntryPrice->86784, 
+ Size->2:::::
+[26 Nov 2025 00:38:44,747 INFO  Transaction -CheckAndOrderService.java]- Cancelled All Previous Orders for EntryPrice->86784.00000000, Size->2:::::
+[26 Nov 2025 00:38:45,281 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->86784.00000000, Size->2, Leverage->10:::::
+[26 Nov 2025 00:38:46,617 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->87284, 
+ Size->4:::::
+[26 Nov 2025 00:38:46,618 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:38:46,625 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86034, 
+ Size->4:::::
+[26 Nov 2025 00:38:46,625 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:14,511 INFO  Transaction -StartBot.java]- ::::::::::::::::::::::::::::::::::New Order execution Started:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:14,511 INFO  Transaction -StartBot.java]- Details of Current Order:- 
+ EntryPrice->86767, 
+ Size->6:::::
+[26 Nov 2025 00:39:15,759 INFO  Transaction -CheckAndOrderService.java]- Cancelled All Previous Orders for EntryPrice->86767.33333333333333333333333, Size->6:::::
+[26 Nov 2025 00:39:16,308 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->86767.33333333333333333333333, Size->6, Leverage->10:::::
+[26 Nov 2025 00:39:17,437 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86017, 
+ Size->12:::::
+[26 Nov 2025 00:39:17,438 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:17,445 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->87267, 
+ Size->8:::::
+[26 Nov 2025 00:39:17,446 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:44,548 INFO  Transaction -StartBot.java]- ::::::::::::::::::::::::::::::::::New Order execution Started:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:44,548 INFO  Transaction -StartBot.java]- Details of Current Order:- 
+ EntryPrice->86754, 
+ Size->18:::::
+[26 Nov 2025 00:39:45,870 INFO  Transaction -CheckAndOrderService.java]- Cancelled All Previous Orders for EntryPrice->86754.11111111111111111111111, Size->18:::::
+[26 Nov 2025 00:39:46,104 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->86754.11111111111111111111111, Size->18, Leverage->25:::::
+[26 Nov 2025 00:39:46,409 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->86754.11111111111111111111111, Size->18, Leverage->10:::::
+[26 Nov 2025 00:39:47,029 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->86954, 
+ Size->18:::::
+[26 Nov 2025 00:39:47,029 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:47,336 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86004, 
+ Size->36:::::
+[26 Nov 2025 00:39:47,337 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:39:47,630 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->87254, 
+ Size->2:::::
+[26 Nov 2025 00:39:47,631 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:40:31,679 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86254, 
+ Size->2:::::
+[26 Nov 2025 00:40:31,680 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:40:34,389 ERROR Operators -Loggers.java]- Operator called default onErrorDropped
+reactor.core.Exceptions$ErrorCallbackNotImplemented: java.lang.NumberFormatException: empty String
+Caused by: java.lang.NumberFormatException: empty String
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842) ~[?:?]
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110) ~[?:?]
+	at java.base/java.lang.Double.parseDouble(Double.java:651) ~[?:?]
+	at com.deltaexchange.trade.service.StartBot.lambda$1(StartBot.java:166) ~[classes/:?]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:196) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:539) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2096) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.7.8.jar:3.7.8]
+	at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:413) [reactor-netty-core-1.2.8.jar:1.2.8]
+	at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:455) [reactor-netty-core-1.2.8.jar:1.2.8]
+	at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:509) [reactor-netty-core-1.2.8.jar:1.2.8]
+	at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:821) [reactor-netty-http-1.2.8.jar:1.2.8]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.2.8.jar:1.2.8]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1519) [netty-handler-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1377) [netty-handler-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1428) [netty-handler-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) [netty-codec-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) [netty-common-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.123.Final.jar:4.1.123.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.123.Final.jar:4.1.123.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+[26 Nov 2025 00:43:32,214 INFO  Transaction -StartBot.java]- ::::::::::::::::::::::::::::::::::New Order execution Started:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:43:32,215 INFO  Transaction -StartBot.java]- Details of Current Order:- 
+ EntryPrice->87250, 
+ Size->2:::::
+[26 Nov 2025 00:43:33,645 INFO  Transaction -CheckAndOrderService.java]- Cancelled All Previous Orders for EntryPrice->87250.00000000, Size->2:::::
+[26 Nov 2025 00:43:34,158 INFO  Transaction -CheckAndOrderService.java]- Leverage Set Successfully Orders for EntryPrice->87250.00000000, Size->2, Leverage->10:::::
+[26 Nov 2025 00:43:35,178 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->sell, 
+ LimitPrice->87750, 
+ Size->4:::::
+[26 Nov 2025 00:43:35,178 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::
+[26 Nov 2025 00:43:35,488 INFO  Transaction -CheckAndOrderService.java]- Order Placed Successfully with Details:- 
+ Side->buy, 
+ LimitPrice->86500, 
+ Size->4:::::
+[26 Nov 2025 00:43:35,488 INFO  Transaction -CheckAndOrderService.java]- ::::::::::::::::::::::::::::::::::New Order execution Ended:::::::::::::::::::::::::::::::::::

@@ -11,8 +11,8 @@ import java.time.Instant;
 public class TestPositionClient {
 
     // TODO: PUT YOUR KEYS HERE
-    private static final String API_KEY = "QkcozvN7XM6uzcRC5lREH6rdDXQI4i";
-    private static final String API_SECRET = "IeWvF36I8wABBseGQwKZ9OoR3THYbDt78jfeCU8aj78iuXSCBbeOYHGtDaC5";
+    private static final String API_KEY = "GIW1raNFd4iY9CDWemOt2HdZFIAuNj";
+    private static final String API_SECRET = "07PkTvdkUC4EuMrLAwn4qib77XlReOoUmj879tmKO2ar0BMNzv6qdtZOM4mp";
 
     private static final String BASE_URL = "https://api.india.delta.exchange";
 
